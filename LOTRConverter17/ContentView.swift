@@ -11,14 +11,22 @@ struct ContentView: View {
     var body: some View {
         ZStack {
             // background image
+            Image(.background)
+                .resizable()
+                .ignoresSafeArea()
             
             VStack {
                 // Logo
-                Image(.background)
-                .resizable()
-                .ignoresSafeArea()
+                Image(.prancingpony)
+                    .resizable()
+                    .scaledToFit()
+                    .frame(height: 200)
                 
                 // App Text
+                Text("LOTR Converter")
+                    .font(.largeTitle)
+                    .fontWeight(.bold)
+                    .foregroundColor(.white)
                 
                 // Currency conversion
                 HStack {
