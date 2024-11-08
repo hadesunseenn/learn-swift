@@ -14,6 +14,9 @@ struct ContentView: View {
             
             VStack {
                 // Logo
+                Image(.background)
+                .resizable()
+                .ignoresSafeArea()
                 
                 // App Text
                 
