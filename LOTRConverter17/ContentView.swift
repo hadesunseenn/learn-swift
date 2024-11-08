@@ -38,15 +38,30 @@ struct ContentView: View {
                         //currecy
                         HStack {
                             //Currecny image
+                            Image(.silverpiece)
+                                .resizable()
+                                .scaledToFit()
+                                .frame(height: 30)
                             
                             // Curreny text
+                            Text("Silver Piece")
+                                .font(.headline)
+                                .foregroundStyle(.white)
                         }
                         
                         //Text Field
+                        TextField("0.00", text: .constant(""))
+                            .textFieldStyle(.roundedBorder)
+                            .foregroundColor(.black)
+                            .font(.title)
+                            .padding()
                     }
                     
                     // second columns = sign
-                    
+                    Image(systemName: "equal")
+                        .font(.largeTitle)
+                        .foregroundStyle(.white)
+                        .symbolEffect(.pulse)
                     
                     // Right conversion section
                     VStack {
@@ -54,15 +69,30 @@ struct ContentView: View {
                         //currecy
                         HStack {
                             //Currecny text
-                            
+                            Text("Gold Piece")
+                                .font(.headline)
+                                .foregroundStyle(.white)
                             // Curreny image
+                            Image(.goldpiece)
+                                .resizable()
+                                .scaledToFit()
+                                .frame(height: 30)
                         }
                         
                         //Text Field
+                        TextField("0.00", text: .constant(""))
+                            .textFieldStyle(.roundedBorder)
+                            .foregroundColor(.black)
+                            .font(.title)
+                            .padding()
                     }
                 }
-                
+                Spacer()
                 //info
+                Image(systemName: "info.circle.fill")
+                    .font(.largeTitle)
+                    .foregroundStyle(.white)
+                    .symbolEffect(.bounce, value: 1)
             }
         }
     }
